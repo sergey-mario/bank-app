@@ -1,0 +1,44 @@
+{
+  "name": "bank-app-with-endpoints",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "owasp": "owasp-dependency-check --project bank-app-with-endpoints -f HTML -f JSON",
+    "prepare": "husky install",
+    "proto": "npx pbjs --es6 proto/messages.js proto/bank.proto",
+    "start": "node server.js",
+    "test": "jest --runInBand",
+    "test:performance": "sh performance-test.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "chai": "^4.5.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "express": "^4.21.2",
+    "husky": "^8.0.0",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.0",
+    "nodemon": "^3.1.9",
+    "owasp-dependency-check": "^0.0.24",
+    "protobufjs": "^7.4.0",
+    "uuid": "^11.0.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "npm run lint:fix",
+      "npm run lint"
+    ]
+  }
+}

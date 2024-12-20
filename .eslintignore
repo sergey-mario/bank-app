@@ -1,4 +1,4 @@
-node_modules/
-.idea
+node_modules
 dependency-check-bin
 dependency-check-reports
+proto/messages.js
