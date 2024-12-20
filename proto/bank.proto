@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package bank;
+
+message CreateUserRequest {
+  string name = 1;
+}
+
+message CreateUserResponse {
+  string id = 1;
+  string message = 2;
+}
+
+message DepositRequest {
+  string userId = 1;
+  float amount = 2;
+}
+
+message DepositResponse {
+  float newBalance = 1;
+  string message = 2;
+}
+
+message WithdrawRequest {
+  string userId = 1;
+  float amount = 2;
+}
+
+message WithdrawResponse {
+  float newBalance = 1;
+  string message = 2;
+}
+
+message GetBalanceRequest {
+  string userId = 1;
+}
+
+message GetBalanceResponse {
+  float balance = 1;
+}
+
+message SendRequest {
+  string fromUserId = 1;
+  string toUserId = 2;
+  float amount = 3;
+}
+
+message SendResponse {
+  string message = 1;
+  float fromUserNewBalance = 2;
+}
