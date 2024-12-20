@@ -62,8 +62,8 @@ This service offers the following banking functionalities:
 
 1. **Clone the repository:**
 ```bash
-git clone <repository-url>
-cd <project-folder>
+git clone https://github.com/sergey-mario/bank-app.git
+cd https://github.com/sergey-mario/bank-app.git
 ```
 
 2. **Install dependencies:**
